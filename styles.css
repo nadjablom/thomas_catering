@@ -92,12 +92,13 @@ nav a:hover {
 .about-text {
     max-width: 600px;
     margin: 0 auto 40px;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 2;
 }
 
 .contact {
     background: #fff;
-    padding: 60px 0;
+    padding: 60px 0 200px;
 }
 
 .contact-inner {
@@ -166,6 +167,12 @@ button:hover {
     width: 100%;
 }
 
+.image-grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+
 .grid-item {
     position: relative;
     min-height: 80vh;
@@ -199,7 +206,7 @@ button:hover {
 }
 
 .featured-text {
-    max-width: 500px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -216,11 +223,14 @@ button:hover {
 }
 
 .featured-text p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #555;
+    font-size: 18px;
+    line-height: 2;
+    color: #4b4545;
 }
 
+.info-text {
+
+}
 
 .overlay {
     position: relative;
