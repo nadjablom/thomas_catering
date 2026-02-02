@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+}
+
 html, body {
     margin: 0;
     font-family: "Raleway", sans-serif;
@@ -42,7 +46,7 @@ img {
 }
 
 .logo {
-    font-size: 30px;
+    font-size: clamp(18px, 4vw, 30px);
     font-weight: 600;
 }
 
@@ -51,6 +55,7 @@ nav a {
     color: #333;
     font-weight: 500;
     margin-left: 30px;
+    font-size: clamp(14px, 3.5vw, 16px);
 }
 
 nav a:hover {
@@ -226,6 +231,19 @@ button:hover {
     font-size: 18px;
     line-height: 2;
     color: #4b4545;
+}
+
+.featured-text h2,
+.about h2,
+.contact h2 {
+    font-size: clamp(24px, 6vw, 34px);
+}
+
+.featured-text p,
+.about-text,
+.contact p {
+    font-size: clamp(15px, 4vw, 18px);
+    line-height: 1.8;
 }
 
 .overlay {
