@@ -1,3 +1,39 @@
+:root {
+    /* backgrounds */
+    --color-background: #F5F2EC;
+    --color-surface: #FFFFF;
+
+    /* text */
+    --color-text: ##333333;
+    --color-text-muted: #6B6861;
+
+    /* Accent */
+    --color-accent: #344638;
+    --color-accent-hover: #26372C;
+
+    /* Details */
+    --color-border: #DEDAD1;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 /* RESET & BASE */
 *,
 *::before,
@@ -9,11 +45,14 @@ html {
     font-size: 16px;
 }
 
+body {
+    font-family: "Raleway", sans-serif;
+}
+
 html, body {
     margin: 0;
-    font-family: "Raleway", sans-serif;
-    color: #333;
-    background-color: #fafafa;
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 img {
@@ -31,11 +70,18 @@ img {
 
 /* HEADER */
 .site-header {
-    background: white;
+    background: var(--color-background);
     border-bottom: 1px solid #eee;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
     position: sticky;
     top: 0;
     z-index: 10;
+}
+
+h1, h2, h3 {
+    color: var(--color-accent);
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 600;
 }
 
 .header-inner {
@@ -52,14 +98,15 @@ img {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: var(--color-accent);
     font-weight: 500;
     margin-left: 30px;
     font-size: clamp(14px, 3.5vw, 16px);
 }
 
 nav a:hover {
-    color: #c96;
+    color: #8A987D;
+    transition: color 0.3s ease;
 }
 
 /* GALLERY */
@@ -72,7 +119,7 @@ nav a:hover {
 
 /* ABOUT SECTION */
 .about {
-    background: #fff;
+    background: #F5F2EC;
     padding: 60px 0;
     margin-top: 40px;
 }
@@ -102,7 +149,7 @@ nav a:hover {
 }
 
 .contact {
-    background: #fff;
+    background: var(--color-background);
     padding: 60px 0 200px;
 }
 
@@ -118,7 +165,7 @@ nav a:hover {
 }
 
 .contact a {
-    color: #c96;
+    color: var(--color-accent);
     text-decoration: none;
     font-weight: 600;
 }
@@ -152,7 +199,7 @@ textarea {
 button {
     width: 100%;
     padding: 14px;
-    background: #c96;
+    background: var(--color-accent);
     color: white;
     border: none;
     border-radius: 6px;
@@ -162,7 +209,7 @@ button {
 }
 
 button:hover {
-    background: #b85;
+    background: var(--color-accent-hover);
 }
 
 /* IMAGE GRID – FULL BLEED */
