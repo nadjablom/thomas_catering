@@ -4,4 +4,5 @@ deployment:
     - export DEPLOYPATH=/home/njorddin/public_html/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp styles.css $DEPLOYPATH
+    - /bin/cp script.js $DEPLOYPATH
     - /bin/cp -R images $DEPLOYPATH
